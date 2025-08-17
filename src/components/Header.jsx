@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
-import LanguageSelector from "./LanguageSelector";
+import { useLanguage } from "../i18n/hooks/useLanguage";
 
 /** Navigation Header */
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
-
-  const links = ["Services", "Testimonials", "About", "Contact"];
   
-  const languages = [
-    { code: "en", name: "English", flag: "🇺🇸" },
-    { code: "om", name: "Afaan Oromo", flag: "🇪🇹" },
-    { code: "ar", name: "العربية", flag: "🇸🇦" }
-  ];
+  const { t, currentLanguage, changeLanguage, languages } = useLanguage();
 
+  const links = [
+    { key: "services", href: "#services" },
+    { key: "testimonials", href: "#testimonials" },
+    { key: "about", href: "#about" },
+    { key: "contact", href: "#contact" }
+  ];
+  
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -60,7 +60,7 @@ export default function Header() {
               </svg>
             </div>
             <h2 className="text-lg lg:text-xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              Nesiha Herbal Clinic
+              {t('header.title')}
             </h2>
           </div>
 
@@ -68,16 +68,131 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-8">
             {links.map((link) => (
               <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
+                key={link.key}
+                href={link.href}
                 className="relative text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors duration-200 group"
               >
-                {link}
+                {t(`navigation.${link.key}`)}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
-            {/* Language Selector */}
-          <LanguageSelector languages={languages} selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} isLanguageOpen={isLanguageOpen} setIsLanguageOpen={setIsLanguageOpen} />  
+            
+            {/* Enhanced Language Selector */}
+            <div className="relative language-selector">
+              <button
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                className="group flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl transition-all duration-200 border border-transparent hover:border-emerald-200"
+              >
+                <span className="text-lg">🌐</span>
+                <span className="hidden sm:block">{t('header.language')}</span>
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-300 ease-out ${
+                    isLanguageOpen ? 'rotate-180' : ''
+                  }`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {isLanguageOpen && (
+                <>
+                  {/* Backdrop */}
+                  <div 
+                    className="fixed inset-0 z-40"
+                    onClick={() => setIsLanguageOpen(false)}
+                  />
+                  
+                  {/* Enhanced Dropdown */}
+                  <div className="absolute right-0 mt-3 w-52 bg-white rounded-2xl shadow-2xl border border-gray-100 py-3 z-50 transform origin-top-right animate-in slide-in-from-top-2 duration-200">
+                    {/* Header */}
+                    <div className="px-4 py-2 border-b border-gray-100 mb-2">
+                      <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
+                        {t('header.language')}
+                      </h3>
+                    </div>
+                    
+                    {/* Language Options */}
+                    <div className="space-y-1">
+                      {languages.map((language, index) => {
+                        const isSelected = currentLanguage === language.code;
+                        const getFlag = (code) => {
+                          switch(code) {
+                            case 'en': return '🇺🇸';
+                            case 'ar': return '🇸🇦';
+                            case 'om': return '🇪🇹';
+                            case 'am': return '🇪🇹';
+                            default: return '🌐';
+                          }
+                        };
+                        const flag = getFlag(language.code);
+                        
+                        return (
+                          <button
+                            key={language.code}
+                            onClick={() => {
+                              changeLanguage(language.code);
+                              setIsLanguageOpen(false);
+                            }}
+                            className={`group w-full flex items-center gap-3 px-4 py-3 text-left rounded-xl mx-2 transition-all duration-200 ${
+                              isSelected 
+                                ? 'bg-gradient-to-r from-emerald-50 to-teal-50 text-emerald-700 border border-emerald-200 shadow-sm' 
+                                : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                            }`}
+                            style={{
+                              animationDelay: `${index * 50}ms`
+                            }}
+                          >
+                            {/* Flag */}
+                            <span className={`text-lg filter drop-shadow-sm transition-transform duration-200 group-hover:scale-110 ${
+                              isSelected ? 'animate-pulse' : ''
+                            }`}>
+                              {flag}
+                            </span>
+                            
+                            {/* Language Name */}
+                            <span className={`font-medium text-sm transition-colors duration-200 ${
+                              isSelected ? 'text-emerald-700' : 'text-gray-700'
+                            }`}>
+                              {language.nativeName}
+                            </span>
+                            
+                            {/* Selection Indicator */}
+                            {isSelected && (
+                              <div className="ml-auto flex items-center gap-2">
+                                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></div>
+                                <svg 
+                                  className="w-4 h-4 text-emerald-600" 
+                                  fill="currentColor" 
+                                  viewBox="0 0 20 20"
+                                >
+                                  <path 
+                                    fillRule="evenodd" 
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 7-7-7" 
+                                    clipRule="evenodd" 
+                                  />
+                                </svg>
+                              </div>
+                            )}
+                            
+                            {/* Hover Effect */}
+                            {!isSelected && (
+                              <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                              </div>
+                            )}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -110,55 +225,98 @@ export default function Header() {
           <div className="pb-6 space-y-4 bg-white rounded-b-2xl shadow-lg border border-emerald-100">
             {links.map((link) => (
               <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
+                key={link.key}
+                href={link.href}
                 onClick={handleLinkClick}
                 className="block text-base font-medium text-gray-700 hover:text-emerald-600 py-3 px-6 rounded-lg hover:bg-emerald-50 transition-all duration-200 mx-4"
               >
-                {link}
+                {t(`navigation.${link.key}`)}
               </a>
             ))}
             <div className="pt-4 border-t border-gray-200 mx-4 pb-4">
-              {/* Mobile Language Selector */}
+              {/* Enhanced Mobile Language Selector */}
               <div className="space-y-3">
-                <h4 className="font-semibold text-gray-700 text-sm uppercase tracking-wide px-2">
-                  Language / Luqataa / اللغة
+                <h4 className="font-semibold text-gray-700 text-sm uppercase tracking-wide px-2 flex items-center gap-2">
+                  <span className="text-lg">🌐</span>
+                  {t('header.language')}
                 </h4>
-                {languages.map((language) => (
-                  <button
-                    key={language.code}
-                    onClick={() => {
-                      setSelectedLanguage(language.name);
-                      setIsMenuOpen(false);
-                    }}
-                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors duration-200 ${
-                      selectedLanguage === language.name 
-                        ? 'bg-emerald-100 text-emerald-700 border border-emerald-300' 
-                        : 'text-gray-700 hover:bg-gray-50'
-                    }`}
-                  >
-                    <span className="text-lg">{language.flag}</span>
-                    <span className="font-medium">{language.name}</span>
-                    {selectedLanguage === language.name && (
-                      <svg className="w-4 h-4 ml-auto text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    )}
-                  </button>
-                ))}
+                {languages.map((language, index) => {
+                  const isSelected = currentLanguage === language.code;
+                  const getFlag = (code) => {
+                    switch(code) {
+                      case 'en': return '🇺🇸';
+                      case 'ar': return '🇸🇦';
+                      case 'om': return '🇪🇹';
+                      case 'am': return '🇪🇹';
+                      default: return '🌐';
+                    }
+                  };
+                  const flag = getFlag(language.code);
+                  
+                  return (
+                    <button
+                      key={language.code}
+                      onClick={() => {
+                        changeLanguage(language.code);
+                        setIsMenuOpen(false);
+                      }}
+                      className={`group w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
+                        isSelected
+                          ? 'bg-gradient-to-r from-emerald-50 to-teal-50 text-emerald-700 border border-emerald-200 shadow-sm' 
+                          : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                      }`}
+                      style={{
+                        animationDelay: `${index * 100}ms`
+                      }}
+                    >
+                      {/* Flag */}
+                      <span className={`text-lg filter drop-shadow-sm transition-transform duration-200 group-hover:scale-110 ${
+                        isSelected ? 'animate-pulse' : ''
+                      }`}>
+                        {flag}
+                      </span>
+                      
+                      {/* Language Name */}
+                      <span className={`font-medium text-sm transition-colors duration-200 ${
+                        isSelected ? 'text-emerald-700' : 'text-gray-700'
+                      }`}>
+                        {language.nativeName}
+                      </span>
+                      
+                      {/* Selection Indicator */}
+                      {isSelected && (
+                        <div className="ml-auto flex items-center gap-2">
+                          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></div>
+                          <svg className="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                      )}
+                      
+                      {/* Hover Effect */}
+                      {!isSelected && (
+                        <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                          <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      )}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>
         </div>
       </div>
 
-             {/* Mobile Menu Overlay */}
-       {isMenuOpen && (
-         <div 
-           className="lg:hidden fixed inset-0 bg-black/20 z-40"
-           onClick={() => setIsMenuOpen(false)}
-         />
-       )}
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div 
+          className="lg:hidden fixed inset-0 bg-black/20 z-40"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
     </header>
   );
 }

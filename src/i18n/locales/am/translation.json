@@ -1,0 +1,116 @@
+{
+  "common": {
+    "loading": "በመጫን ላይ...",
+    "error": "ስህተት ተከስቷል",
+    "submit": "ላክ",
+    "cancel": "ሰርዝ",
+    "save": "አስቀምጥ",
+    "edit": "አርትዕ",
+    "delete": "ሰርዝ",
+    "search": "ፈልግ",
+    "close": "ዝጋ",
+    "back": "ተመለስ",
+    "next": "ቀጣይ",
+    "previous": "የቀድሞ"
+  },
+  "navigation": {
+    "home": "የቤት ገጽ",
+    "about": "ስለ እኛ",
+    "services": "አገልግሎቶች",
+    "testimonials": "የደንበኞች አስተያየቶች",
+    "contact": "አድራሻ",
+    "blog": "የጽሑፍ ገጽ"
+  },
+  "header": {
+    "title": "ነሺሃ የዕፅዋት ክሊኒክ",
+    "tagline": "የተፈጥሮ ፈውስ መፍትሄዎች",
+    "language": "ቋንቋ"
+  },
+  "hero": {
+    "title": "የተፈጥሮ ፈውስ ለ",
+    "subtitle": "የተሻሻለ ሕይወት",
+    "description": "በነሺሃ የዕፅዋት ክሊኒክ፣ የባህላዊ መድሃኒቶችን ከዘመናዊ ስራዎች ጋር እንደምናጣምር፣ የሰውነትዎ ተፈጥሮ የፈውስ አቅምን የሚያሳድግ የግል እንክብካቤ እንሰጣለን።",
+    "cta": "የመገናኛ ቀን ያስይዙ",
+    "learnMore": "ተጨማሪ ያውቁ",
+    "traditionalRemedies": "የባህላዊ መድሃኒቶች",
+    "modernPractices": "ዘመናዊ ስራዎች",
+    "personalizedCare": "የግል እንክብካቤ"
+  },
+  "services": {
+    "title": "የእኛ አገልግሎቶች",
+    "subtitle": "ለጤናዎ ሁለገብ የዕፅዋት ሕክምናዎች",
+    "consultation": "የዕፅዋት ኮንስላቴሽን",
+    "consultationDesc": "የግል የዕፅዋት ሕክምና ኮንስላቴሽን",
+    "treatment": "የዕፅዋት ሕክምና",
+    "treatmentDesc": "የግል የዕፅዋት መድሃኒቶች እና ሕክምናዎች",
+    "wellness": "የጤና ፕሮግራሞች",
+    "wellnessDesc": "ሁለገብ የጤና እና የመከላከል ፕሮግራሞች"
+  },
+  "about": {
+    "title": "ስለ ነሺሃ",
+    "subtitle": "የተፈጥሮ ጤና ውስጥ የሚያምኑ አጋርዎ",
+    "description": "ውጤታማ የተፈጥሮ ፈውስ መፍትሄዎችን ለመስጠት የባህላዊ የዕፅዋት ጥበብን ከዘመናዊ ግንዛቤ ጋር እንደምናጣምር።",
+    "extendedDescription": "ክሊኒካችን የባህላዊ የዕፅዋት ጥበብን ከዘመናዊ ሳይንሳዊ ምርምር ጋር እንደምትደራጅ፣ የግል የሕክምና ዕቅዶችን ትፈጥራለች። ሰውን ሙሉ እንደምናስተካክል፣ የሚያምን ሰው ነን፣ ምልክቶችን ብቻ ሳይሆን፣ የረጅም ጊዜ ጤና እና ኃይል እንደምናረጋግጥ።",
+    "experience": "የስራ ስምምነት ዓመታት",
+    "patients": "ደስተኛ ታማሚዎች",
+    "treatments": "የተሳካሩ ሕክምናዎች",
+    "herbalWisdom": "የባህላዊ ዕፅዋት ጥበብ",
+    "herbalWisdomDesc": "ከትውልድ ወደ ትውልድ የተላለፈ",
+    "certifiedPractitioners": "የተመደቡ ሰጪዎች",
+    "certifiedPractitionersDesc": "የቡድናችን የተሰለጠኑ የዕፅዋት ሕክምና ሰጪዎችን ያካትታል፣ ሰፊ ስልጠና እና ስራ ስምምነት ያላቸው።",
+    "naturalIngredients": "የተፈጥሮ ንጥረ ነገሮች",
+    "naturalIngredientsDesc": "በሁሉም ሕክምናዎቻችን ውስጥ ከፍተኛ ጥራት ያላቸው፣ በስነ ምግባር የተገኙ የተፈጥሮ ንጥረ ነገሮችን ብቻ እንጠቀማለን።",
+    "holisticApproach": "ሁለገብ አቀራረብ",
+    "holisticApproachDesc": "ሰውን ሙሉ እናስተካክላለን፣ የረጅም ጊዜ ጤና ለማረጋገጥ ምልክቶችን ብቻ ሳይሆን ሥር ምክንያቶችን እንደምናስተካክል።"
+  },
+  "testimonials": {
+    "title": "የታማሚዎቻችን ንግግር",
+    "subtitle": "ከእውነተኛ ሰዎች የሚገኙ እውነተኛ ታሪኮች"
+  },
+  "contact": {
+    "title": "ያግኙን",
+    "subtitle": "የፈውስ ጉዞዎን ለመጀመር ዝግጁ ነዎት?",
+    "name": "ሙሉ ስም",
+    "email": "የኢሜይል አድራሻ",
+    "phone": "የስልክ ቁጥር",
+    "message": "መልእክትዎ",
+    "sendMessage": "መልእክት ላክ",
+    "address": "አድራሻ",
+    "phoneLabel": "ስልክ",
+    "emailLabel": "ኢሜይል",
+    "hours": "የስራ ሰዓታት",
+    "contactInformation": "የመገናኛ መረጃ",
+    "emailAddress": "info@nesihaherbalclinic.com",
+    "phoneNumber": "(555) 123-4567",
+    "mainOffice": "ዋና ቢሮ",
+    "whatsapp": "ዋትስአፕ",
+    "whatsappNumber": "(555) 987-6543",
+    "quickResponse": "ፈጣን ምላሽ",
+    "streetAddress": "123 የጤና አደባባይ",
+    "cityState": "የጤና ከተማ፣ ካሊፎርኒያ 90210",
+    "businessHours": "የስራ ሰዓታት",
+    "mondayFriday": "ሰኞ - እሁድ",
+    "weekdayHours": "9:00 ጥዋት - 6:00 ማታ",
+    "saturday": "ቅዳ",
+    "saturdayHours": "10:00 ጥዋት - 4:00 ማታ",
+    "sunday": "እሁድ",
+    "closed": "ዘግቷል",
+    "ourLocation": "አካባቢያችን",
+    "easyToFind": "ማግኘት ቀላል ነው!",
+    "locationDescription": "እኛ በየጤና ከተማ መሃል አለን፣ ከዋናው የጤና አደባባይ በቀር። ነፃ የመኪና ማቆሚያ አለ።",
+    "needImmediateAssistance": "ወቅታዊ እርዳታ ይፈልጋሉ?",
+    "expertsReady": "የዕፅዋት ሕክምና ስፔሻሊስቶቻችን ዛሬ እርዳታ ለመስጠት ዝግጁ ናቸው",
+    "scheduleConsultation": "ኮንስላቴሽን ያስይዙ"
+  },
+  "footer": {
+    "copyright": "© 2024 ነሺሃ የዕፅዋት ክሊኒክ። ሁሉም መብቶች የተጠበቁ ናቸው።",
+    "privacy": "የግል መረጃ ፖሊሲ",
+    "terms": "የአገልግሎት ውል"
+  },
+  "blog": {
+    "title": "የጤና እና ደህንነት የጽሑፍ ገጽ",
+    "subtitle": "ለተፈጥሮ ሕይወት ግንዛቤዎች እና ምክሮች",
+    "readMore": "ተጨማሪ ያንብቡ",
+    "publishedOn": "የተለቀቀበት ቀን"
+  }
+}

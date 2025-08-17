@@ -1,0 +1,116 @@
+{
+  "common": {
+    "loading": "Bakka bu'aa jiru...",
+    "error": "Dogoggora dhufe",
+    "submit": "Ersi",
+    "cancel": "Dhiisi",
+    "save": "Kayi",
+    "edit": "Jijjiiri",
+    "delete": "Haqu",
+    "search": "Barbaadi",
+    "close": "Cufi",
+    "back": "Duubatti deebi",
+    "next": "Itti aansu",
+    "previous": "Duraan"
+  },
+  "navigation": {
+    "home": "Mana",
+    "about": "Waa'ee keenya",
+    "services": "Tajaajila",
+    "testimonials": "Yaadannoo dhiyoota",
+    "contact": "Quunnamaa",
+    "blog": "Barreessitoota"
+  },
+  "header": {
+    "title": "Mana Qoricha Aadaa Nasiihaa",
+    "tagline": "Furmaata fayyaa uumamaa",
+    "language": "Afaan"
+  },
+  "hero": {
+    "title": "Fayyaa Uumamaa",
+    "subtitle": "Jireenya Fayyaa",
+    "description": "Neshiha Qoricha Qaallii keessatti, qoricha aadaa fi hojii ammayyaa walitti qabuu dhaan dhiiga shakhsiyaa argisiisuu dha, keessumattuu humna uumamaa keessan fayyaa uumamaa.",
+    "cta": "Yaadaa Qabduu",
+    "learnMore": "Beyki",
+    "traditionalRemedies": "Qoricha Aadaa",
+    "modernPractices": "Hojii Ammayyaa",
+    "personalizedCare": "Dhiiga Shakhsiyaa"
+  },
+  "services": {
+    "title": "Tajaajila Keenya",
+    "subtitle": "Qoricha qaallii guutuu fayyaa keessanaf",
+    "consultation": "Qabduu Qoricha Qaallii",
+    "consultationDesc": "Qabduu qoricha qaallii shakhsiyaa",
+    "treatment": "Qoricha Qaallii",
+    "treatmentDesc": "Qoricha qaallii fi dhiiga qaallii shakhsiyaa",
+    "wellness": "Programii Fayyaa",
+    "wellnessDesc": "Programii fayyaa guutuu fi dhiiga"
+  },
+  "about": {
+    "title": "Waa'ee Neshiha",
+    "subtitle": "Hojii keessan fayyaa uumamaa keessatti",
+    "description": "Akkasitti qaallii aadaa fi beekumsa ammayyaa walitti qabuu dhaan furmaata fayyaa uumamaa bu'aa qaban argisiisuu dha.",
+    "extendedDescription": "Kiliinikii keenya qaallii aadaa waggaa dheeraa fi qorannoo sayinsii ammayyaa walitti qabuu dhaan qoricha shakhsiyaa uumuu dha. Qoricha nama guutuu, kan hin taane mallattoo qofa, fayyaa dheeraa fi jireenya qaban gochuun amanuu dha.",
+    "experience": "Waggaa Muuxannoo",
+    "patients": "Dhiyoota Gammadaa",
+    "treatments": "Qoricha Milkaa'e",
+    "herbalWisdom": "Qaallii Aadaa",
+    "herbalWisdomDesc": "Waggaa dheeraa irraa darbee",
+    "certifiedPractitioners": "Hojjataa Qaallii",
+    "certifiedPractitionersDesc": "Gareen keenya hojjataa qaallii aadaa muuxannoo qaban kan qorannoo fi muuxannoo dheeraa qaban.",
+    "naturalIngredients": "Qaallii Uumamaa",
+    "naturalIngredientsDesc": "Qaallii uumamaa sadarkaa olaanaa, kan lakkii sirrii ta'e qaban qofa fayyadamu qoricha keenya hunda keessatti.",
+    "holisticApproach": "Qaallii Guutuu",
+    "holisticApproachDesc": "Nama guutuu qorichu dha, sababii sirrii ta'e mallattoo qofa hin taane fayyaa dheeraa gochuuf."
+  },
+  "testimonials": {
+    "title": "Dhiyoota keenya maal jedhu",
+    "subtitle": "Seenaa dhugaa namoota dhugaa irraa"
+  },
+  "contact": {
+    "title": "Quunnamaa",
+    "subtitle": "Tarii keessan fayyaa jalqabuu dha?",
+    "name": "Maqaa Guutuu",
+    "email": "Email Address",
+    "phone": "Lakkoofsa Telefoonaa",
+    "message": "Ergaa Keessan",
+    "sendMessage": "Ergaa Ersi",
+    "address": "Teessuma",
+    "phoneLabel": "Telefoonaa",
+    "emailLabel": "Email",
+    "hours": "Sa'aatiin Hojii",
+    "contactInformation": "Odeeffannoo Quunnamaa",
+    "emailAddress": "info@nesihaherbalclinic.com",
+    "phoneNumber": "(555) 123-4567",
+    "mainOffice": "Biroo Guddaa",
+    "whatsapp": "WhatsApp",
+    "whatsappNumber": "(555) 987-6543",
+    "quickResponse": "Deebii Dhiyoota",
+    "streetAddress": "123 Fayyaa Teessuma",
+    "cityState": "Fayyaa Magaalaa, CA 90210",
+    "businessHours": "Sa'aatiin Hojii",
+    "mondayFriday": "Dilbata - Jimaata",
+    "weekdayHours": "9:00 WD - 6:00 WB",
+    "saturday": "Sanbata",
+    "saturdayHours": "10:00 WD - 4:00 WB",
+    "sunday": "Dilbata",
+    "closed": "Cufame",
+    "ourLocation": "Teessuma Keenya",
+    "easyToFind": "Argachuu salphaa!",
+    "locationDescription": "Teessuma keenya gubbaa Fayyaa Magaalaa keessatti, Fayyaa Teessuma guddaa irraa kan fagaatan. Baay'inni garaa qaba.",
+    "needImmediateAssistance": "Gargaarsa Dhiyoota Barbaadda?",
+    "expertsReady": "Muuxannoo qaallii keenya har'a gargaarsa keessan gochuuf qophaa'e",
+    "scheduleConsultation": "Qabduu Qaallii Qabduu"
+  },
+  "footer": {
+    "copyright": "© 2024 Neshiha Qoricha Qaallii. Mirgi hunda keessan qaba.",
+    "privacy": "Seraa Sirrii",
+    "terms": "Sharii Tajaajilaa"
+  },
+  "blog": {
+    "title": "Blog Fayyaa fi Fayyaa",
+    "subtitle": "Beekumsa fi gorsa jireenya uumamaa",
+    "readMore": "Beyki",
+    "publishedOn": "Maxxaname"
+  }
+}
