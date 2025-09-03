@@ -48,15 +48,15 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 stats-grid">
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-2">14+</div>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">6+</div>
                 <p className="text-sm text-gray-600">{t('about.experience')}</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-teal-600 mb-2">500+</div>
+                <div className="text-3xl font-bold text-teal-600 mb-2">100+</div>
                 <p className="text-sm text-gray-600">{t('about.patients')}</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">1000+</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
                 <p className="text-sm text-gray-600">{t('about.treatments')}</p>
               </div>
             </div>

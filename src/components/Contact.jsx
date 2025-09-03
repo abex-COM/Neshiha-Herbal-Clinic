@@ -65,7 +65,7 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-gray-800">{t('contact.phoneLabel')}</p>
                     <p className="text-blue-600 hover:text-blue-700 transition-colors">
-                      {t('contact.phoneNumber', '(555) 123-4567')}
+                      {t('contact.phoneNumber', '+251912166549')}
                     </p>
                     <p className="text-sm text-gray-600">{t('contact.mainOffice', 'Main Office')}</p>
                   </div>
@@ -78,7 +78,7 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-gray-800">{t('contact.whatsapp', 'WhatsApp')}</p>
                     <p className="text-green-600 hover:text-green-700 transition-colors">
-                      {t('contact.whatsappNumber', '(555) 987-6543')}
+                      {t('contact.whatsappNumber', '+251912166549')}
                     </p>
                     <p className="text-sm text-gray-600">{t('contact.quickResponse', 'Quick Response')}</p>
                   </div>
@@ -91,8 +91,7 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-gray-800">{t('contact.address')}</p>
                     <p className="text-gray-700">
-                      {t('contact.streetAddress', '123 Wellness Avenue')}<br />
-                      {t('contact.cityState', 'Healthville, CA 90210')}
+                      {t('contact.streetAddress', 'Bero,AshewaMeda')}<br />
                     </p>
                   </div>
                 </div>
@@ -119,10 +118,7 @@ export default function Contact() {
                   <span className="font-medium text-gray-700">{t('contact.mondayFriday', 'Monday - Friday')}</span>
                   <span className="text-emerald-600 font-semibold">{t('contact.weekdayHours', '9:00 AM - 6:00 PM')}</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-100 business-hours-row">
-                  <span className="font-medium text-gray-700">{t('contact.saturday', 'Saturday')}</span>
-                  <span className="text-emerald-600 font-semibold">{t('contact.saturdayHours', '10:00 AM - 4:00 PM')}</span>
-                </div>
+               
                 <div className="flex justify-between items-center py-2 business-hours-row">
                   <span className="font-medium text-gray-700">{t('contact.sunday', 'Sunday')}</span>
                   <span className="text-red-500 font-semibold">{t('contact.closed', 'Closed')}</span>
@@ -166,26 +162,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Quick Contact CTA */}
-            <div className="bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl p-6 text-white text-center shadow-lg">
-              <h4 
-                className="text-xl font-semibold mb-2"
-                dir={isRTL ? 'rtl' : 'ltr'}
-                lang={currentLanguage}
-              >
-                {t('contact.needImmediateAssistance', 'Need Immediate Assistance?')}
-              </h4>
-              <p 
-                className="text-emerald-100 mb-4"
-                dir={isRTL ? 'rtl' : 'ltr'}
-                lang={currentLanguage}
-              >
-                {t('contact.expertsReady', 'Our herbal medicine experts are ready to help you today')}
-              </p>
-              <button className="bg-white text-emerald-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-md cta-button">
-                {t('contact.scheduleConsultation', 'Schedule Consultation')}
-              </button>
-            </div>
+           
           </div>
         </div>
       </div>
